@@ -1,5 +1,5 @@
 import React from 'react'
 
-export default () => {
-    return <h1>Primeiro Componente com Arrow Function!</h1>
+export default (props) => {
+return <h1>{props.valor}</h1>
 } 
