@@ -3,10 +3,19 @@ import React, { Component } from 'react'
 export default class Contador extends Component {
 
     // Para funcionar o this na função
-    constructor(props) {
-        super(props)
-        this.maisUm = this.maisUm.bind(this)
-    }
+    // Solucao 01
+    // constructor(props) {
+    //     super(props)
+    //     this.maisUm = this.maisUm.bind(this)
+    // }
+
+    // Solucao 02
+    // <button onClick={() => this.maisUm()}></button>
+
+    // Solucao 03
+    // maisUm = () => {
+    //     this.props.numero++
+    // }
 
     maisUm() {
         this.props.numero++
