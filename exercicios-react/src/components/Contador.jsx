@@ -17,16 +17,35 @@ export default class Contador extends Component {
     //     this.props.numero++
     // }
 
-    maisUm() {
-        this.props.numero++
+    state = {
+        numero: this.props.numeroInicial
+    }
+
+    maisUm = () => {
+        this.setState({ numero: this.state.numero + 1 })
+    }
+
+    menosUm = () => {
+        this.setState({ numero: this.state.numero - 1 })
+    }
+
+    alterarNumeroSomar = (diferenca) => {
+        this.setState({ numero: this.state.numero + diferenca })
+    }
+
+    alterarNumeroSubtrair = (diferenca) => {
+        this.setState({ numero: this.state.numero - diferenca })
     }
 
     render() {
         return (
             <div>
-                <div>Número: {this.props.numero}</div>
+                <div>Número: {this.state.numero}</div>
                 <button onClick={this.maisUm}>Increment</button>
-                <button>Decrement</button>
+                <button onClick={this.menosUm}>Decrement</button>
+                <br />
+                <button onClick={() => this.alterarNumeroSomar(10)}>Increment 10</button>
+                <button onClick={() => this.alterarNumeroSubtrair(10)}>Decrement 10</button>
             </div>
         )
     }
