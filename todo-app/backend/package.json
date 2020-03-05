@@ -4,7 +4,7 @@
   "description": "Todo backend for my react app",
   "main": "src/loader.js",
   "scripts": {
-    "dev" : "nodemon",
+    "dev": "nodemon",
     "production": "pm2 start src/loader.js --name todo-app"
   },
   "author": "Kalil Teixeira Ventura Monteiro",
