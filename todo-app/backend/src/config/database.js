@@ -1,10 +1,4 @@
 const mongoose = require('mongoose')
 mongoose.Promise = global.Promise
 
-const databaseConfig = {
-    database: 'mongodb',
-    host: 'localhost',
-    schema: 'todo'
-}
-
-module.exports = mongoose.connect(`${databaseConfig.database}://${databaseConfig.host}/${databaseConfig.schema}`)
+module.exports = mongoose.connect(`mongodb://kalil:123456789a@ds056288.mlab.com:56288/todo-react`)
